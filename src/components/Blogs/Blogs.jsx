@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Blog from "./Blog";
 import BlogPost from "./BlogPost";
+import BlogUpdateModel from "./BlogUpdateModal";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
+  const [selectedBlog, setSelectedBlog] = useState(null);
   useEffect(() => {
     fetch("http://localhost:5000/blogs")
       .then((res) => res.json())
@@ -24,9 +26,13 @@ const Blogs = () => {
           <Blog
             key={blog?._id}
             blog={blog}
+            setSelectedBlog={setSelectedBlog}
             handleBlogDelete={handleBlogDelete}
           ></Blog>
         ))}
+        {selectedBlog && (
+          <BlogUpdateModel selectedBlog={selectedBlog}></BlogUpdateModel>
+        )}
       </div>
     </div>
   );

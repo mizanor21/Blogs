@@ -1,7 +1,7 @@
 import React from "react";
 import toast from "react-hot-toast";
 import { FaEdit, FaTrash } from "react-icons/fa";
-const Blog = ({ blog, handleBlogDelete }) => {
+const Blog = ({ blog, handleBlogDelete, setSelectedBlog }) => {
   const { _id, title, author, description } = blog;
 
   const handleDelete = () => {
@@ -27,7 +27,13 @@ const Blog = ({ blog, handleBlogDelete }) => {
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold">{title}</h1>
         <div className="flex gap-5">
-          <FaEdit />
+          <label
+            onClick={() => setSelectedBlog(blog)}
+            htmlFor="note-modal"
+            className="cursor-pointer"
+          >
+            <FaEdit></FaEdit>
+          </label>
           <button onClick={handleDelete}>
             <FaTrash />
           </button>
