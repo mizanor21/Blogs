@@ -1,9 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo/doodle_logo.png";
 
 const Navbar = () => {
   return (
-    <div>
-      this navbar
+    <div className="navbar bg-base-200 ">
+      <Link title="Doodle blogs" className="flex gap-2 container mx-auto">
+        <img src={logo} alt="" />
+        <p className="normal-case text-xl">Blogs</p>
+      </Link>
     </div>
   );
 };
