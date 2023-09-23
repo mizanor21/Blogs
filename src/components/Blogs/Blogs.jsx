@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from "react";
-import Blog from './Blog';
+import Blog from "./Blog";
+import BlogPost from "./BlogPost";
 const Blogs = () => {
-    const [blogs, setblogs] = useState([])
-    useEffect(() =>{
-        fetch("https://jsonplaceholder.typicode.com/posts")
-        .then(res => res.json())
-        .then(data => setblogs(data))
-    },[])
+  const [blogs, setblogs] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/blogs")
+      .then((res) => res.json())
+      .then((data) => setblogs(data));
+  }, []);
   return (
     <div>
-        <h1 className='text-3xl'>Blogs</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 ">
-            {
-                blogs.map(blog => <Blog key={blog.id} blog= {blog}></Blog>)
-            }
-          </div>
-
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-10">
+        <div className="flex justify-center items-center">
+          <BlogPost></BlogPost>
+        </div>
+        {blogs.map((blog) => (
+          <Blog key={blog.id} blog={blog}></Blog>
+        ))}
+      </div>
     </div>
   );
 };

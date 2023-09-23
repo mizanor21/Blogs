@@ -1,11 +1,11 @@
 import React from "react";
-const Blog = ({blog}) => {
-    const {id, title, body} = blog;
+const Blog = ({ blog }) => {
+  const { title, author, description } = blog;
   return (
-    <div className='border'>
-        <p>{id}</p>
-        <h1 className='text-xl '>{title}</h1>
-        <p>{body}</p>
+    <div className="border">
+      <h1 className="text-xl font-bold">{title}</h1>
+      <small>{author}</small>
+      <p>{description}</p>
     </div>
   );
 };
