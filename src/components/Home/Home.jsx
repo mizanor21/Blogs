@@ -1,9 +1,9 @@
 import React from "react";
-import Blogs from '../Blogs/Blogs';
+import Blogs from "../Blogs/Blogs";
 const Home = () => {
   return (
-    <div>
-        <Blogs></Blogs>
+    <div className="min-h-screen">
+      <Blogs></Blogs>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Blogs = () => {
   }, []);
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-10 container mx-auto">
         <div className="flex justify-center items-center">
           <BlogPost></BlogPost>
         </div>
