@@ -23,7 +23,7 @@ const Blog = ({ blog, handleBlogDelete, setSelectedBlog }) => {
   };
 
   return (
-    <div className="border">
+    <div className="border-b-8 rounded-b-lg p-5 border-orange-400">
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold">{title}</h1>
         <div className="flex gap-5">
@@ -40,7 +40,8 @@ const Blog = ({ blog, handleBlogDelete, setSelectedBlog }) => {
         </div>
       </div>
       <small>{author}</small>
-      <p>{description}</p>
+      <hr />
+      <p className="mt-5">{description}</p>
     </div>
   );
 };
