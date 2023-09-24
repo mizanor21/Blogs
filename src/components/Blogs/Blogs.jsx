@@ -17,11 +17,9 @@ const Blogs = () => {
   };
 
   return (
-    <div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-10 container mx-auto">
-        <div className="flex justify-center items-center">
-          <BlogPost></BlogPost>
-        </div>
+    <div className="md:flex justify-center container mx-auto m-10 gap-10">
+      <BlogPost></BlogPost>
+      <div className="max-w-3xl">
         {blogs?.map((blog) => (
           <Blog
             key={blog?._id}

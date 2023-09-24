@@ -54,7 +54,7 @@ const Blog = ({ blog, handleBlogDelete, setSelectedBlog }) => {
   const paragraphs = description.split("\n");
 
   return (
-    <div className=" p-5">
+    <div className="mb-10">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold font-serif">{title}</h1>
         <div className="flex gap-5">
@@ -73,7 +73,7 @@ const Blog = ({ blog, handleBlogDelete, setSelectedBlog }) => {
       <small>{author}</small>
       {/* Render each paragraph with spacing */}
       {paragraphs.map((paragraph, index) => (
-        <div key={index} className="mt-5 font-serif">
+        <div key={index} className="my-3 font-serif">
           {paragraph}
         </div>
       ))}
