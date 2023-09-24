@@ -8,7 +8,7 @@ const BlogUpdateModel = ({ selectedBlog }) => {
 
   const onSubmit = (data) => {
     console.log(data);
-    fetch(`http://localhost:5000/blogs/${_id}`, {
+    fetch(`https://blog-server-ifut9xkib-mizanor21.vercel.app/blogs/${_id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",

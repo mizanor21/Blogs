@@ -8,7 +8,7 @@ const Blog = ({ blog, handleBlogDelete, setSelectedBlog }) => {
   const handleDelete = () => {
     const agree = window.confirm(`Are you sure you want to delete?`);
     if (agree) {
-      fetch(`http://localhost:5000/blog/${_id}`, {
+      fetch(`https://blog-server-ifut9xkib-mizanor21.vercel.app/blog/${_id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -27,14 +27,14 @@ const Blog = ({ blog, handleBlogDelete, setSelectedBlog }) => {
 
   const [comments, setComments] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/comments")
+    fetch("https://blog-server-ifut9xkib-mizanor21.vercel.app/comments")
       .then((res) => res.json())
       .then((data) => setComments(data));
   }, []);
 
   const onSubmit = (data) => {
     setComments([...comments, data]);
-    fetch("http://localhost:5000/comments", {
+    fetch("https://blog-server-ifut9xkib-mizanor21.vercel.app/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

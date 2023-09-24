@@ -15,7 +15,8 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <BlogList></BlogList>,
-        loader: () => fetch(`http://localhost:5000/blogs`),
+        loader: () =>
+          fetch(`https://blog-server-ifut9xkib-mizanor21.vercel.app/blogs`),
       },
     ],
   },

@@ -9,7 +9,7 @@ const BlogPost = () => {
 
   const onSubmit = (data) => {
     setBlogs([...blogs, data]);
-    fetch("http://localhost:5000/blogs", {
+    fetch("https://blog-server-ifut9xkib-mizanor21.vercel.app/blogs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

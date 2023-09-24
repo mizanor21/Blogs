@@ -6,7 +6,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [selectedBlog, setSelectedBlog] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch("https://blog-server-ifut9xkib-mizanor21.vercel.app/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
