@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import { FaPlus } from "react-icons/fa";
 
 const BlogPost = () => {
   const { register, handleSubmit } = useForm();
@@ -28,6 +29,7 @@ const BlogPost = () => {
     <div>
       {/* The button to open modal */}
       <label htmlFor="my_modal_7" className="btn">
+        <FaPlus />
         New Blog
       </label>
 
@@ -73,7 +75,7 @@ const BlogPost = () => {
                   Description <span className="text-red-600">*</span>
                 </span>
               </label>
-              <input
+              <textarea
                 {...register("description")}
                 required
                 type="text"

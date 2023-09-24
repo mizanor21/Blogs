@@ -35,7 +35,7 @@ const BlogUpdateModel = ({ selectedBlog }) => {
       <input type="checkbox" id="note-modal" className="modal-toggle" />
       <label htmlFor="note-modal" className="modal cursor-pointer">
         <label className="modal-box relative" htmlFor="">
-          <h3 className="text-lg font-bold">Write your dream.</h3>
+          <h3 className="text-lg font-bold">Update blog</h3>
           <form
             className="bg-white p-10"
             onSubmit={handleSubmit(onSubmit)}
